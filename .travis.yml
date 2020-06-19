@@ -2,7 +2,7 @@ language: go
 dist: trusty
     script:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker build -t ameya28/hello-webpage .
+    - docker build -t ameya/hello-webpage .
     - docker images
-    - docker push ameya28/hello-webpage
+    - docker push ameya/hello-webpage
   
