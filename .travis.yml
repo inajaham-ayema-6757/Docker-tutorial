@@ -5,9 +5,9 @@ jobs:
   - stage: build docker image
     script:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker build -t ameya28/hello-webpage .
+    - docker build -t ameyamahajani6757/ameya .
     - docker images
-    - docker push ameya28/hello-webpage
+    - docker push ameyamahajani6757/ameya
   - stage: Deploy to Heroku
     deploy:
       provider: heroku
