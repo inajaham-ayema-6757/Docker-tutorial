@@ -5,7 +5,14 @@ jobs:
   - stage: build docker image
     script:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker build -t ameyamahajani6757/ameya .
+    - docker build -t ameya28/hello-webpage .
     - docker images
-    - docker push ameyamahajani6757/ameya
-  
+    - docker push ameya28/hello-webpage
+  - stage: Deploy to Heroku
+    deploy:
+      provider: heroku
+      api_key:
+        secure: DVon+1B5oQq9kSNSlMSlpZcFw9RQm3qtg4zVAcJ0akGEeVWg4xySyijBK83XdO4WXQ9Jh2BzLzpA8IRlS3MtXSJjqi1+f3BSI3vjswNPKcwWwfQKFhf207a1wN6yitTevJIEyFkuHAdg6IMpKhHcam5oBEKpGI0ZtGldxRgx1WQpadHDRPTWUDxRntU8fDgIkiI+iQ+wJgwW7LbRl6xKwl+6F+JekCOhHQbRBLYet2kb/JN7/6YtMVuzmsN5fTCcrlo65HCjrd2dFpqeYjjEBJL1pSMdZMT+LBPU66xP9MLPU+1jmPOa2U7VsbdYolmN1qX0Sj1JPUZsAxLxT1rZ8lGyFnnEPyQ5L9KJzjwrZdLgJn4P3O6mIVqhwtI3uS188qVm4a1yIkLsQ8vA628T2in1qsvPLHGcHOTmbGdI4Xco9AUVX/BvGrpQz2sby+U2Riv1er8P9eJxquiU6K/q7ZBNPbYUCzZJf3RrPWLOlOacmPAzQ3KwBWfmXyHotA/SMsTCC/4hnaSObxdLV9DFm9xi5ycJeJObfiOM9xtMXxgwf8doSeC8Ud6txk9B73T2w4gTj0wJ7mjX6pdEcec0MKbjS+Nt5u+DPVATDnbgK4ddZU22+Db1LYSgEtvIUGeYi9hrUyc1gd+gycGTtZWptNRg4eisvCF22nciQJIEo2U=
+        app: my-webapp6757
+      on:
+        repo: inajaham-ayema-6757/Docker-tutorial
