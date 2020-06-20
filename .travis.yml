@@ -8,6 +8,35 @@ jobs:
     - docker build -t ameyamahajani6757/ameya .
     - docker images
     - docker push ameyamahajani6757/ameya
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   - stage: Deploy to Heroku
     deploy:
       provider: heroku
