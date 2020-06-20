@@ -15,11 +15,5 @@ func main() {
 	fmt.Println("Press Ctrl+C to close the server. ")
 	http.HandleFunc("/", helloWorld)
 	http.ListenAndServe(":8080", nil)
-	//srv := &http.Server{Addr: ":8080"}
-	//go func() {
-	//	srv.ListenAndServe()
-	//}()
-	//time.Sleep(10 * time.Second)
-	//srv.Shutdown(context.TODO())
-	//s.Shutdown(context.Background())
+
 }
