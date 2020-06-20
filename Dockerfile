@@ -4,7 +4,7 @@ FROM golang:1.14-alpine
 
 RUN apk update
 
-COPY ./myweb.go /
+COPY ./mywe.go /
 
 WORKDIR /
 
