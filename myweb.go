@@ -9,7 +9,6 @@ import (
 func helloWorld(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello Friends ..!!!\n")
 	fmt.Fprintf(w, "And I am Ameya Makarand Mahajani\n")
-	ipAddress, _, _ := net.SplitHostPort(r.RemoteAddr)
 }
 
 func main() {
