@@ -5,7 +5,7 @@ jobs:
   - stage: build docker image
     script:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker build -t inajaham-ayema-6757/ameya .
+    - docker build -t ameyamahajani6757/ameya .
     - docker images
-    - docker push inajaham-ayema-6757/ameya
+    - docker push ameyamahajani6757/ameya
   
